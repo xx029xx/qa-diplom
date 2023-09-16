@@ -77,4 +77,7 @@ public class PagePaymentOnCredit {
     public void emptyFields() {
         continueButton.click();
     }
+
+    public void waitErrorMessageAboutWrongFormat() {
+    }
 }

@@ -77,4 +77,7 @@ public class PagePayment {
     public void emptyFields() {
         continueButton.click();
     }
+
+    public void waitSuccessMessage() {
+    }
 }
