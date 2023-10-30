@@ -2,6 +2,8 @@ package ru.netology.dailyTrip.tests.backend;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
 import com.google.gson.Gson;
+import ru.netology.dailyTrip.helpers.DataHelper;
+import ru.netology.dailyTrip.helpers.DbHelper;
 import io.qameta.allure.*;
 import io.qameta.allure.selenide.AllureSelenide;
 import io.restassured.builder.RequestSpecBuilder;
@@ -12,8 +14,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import ru.netology.dailyTrip.helpers.DataHelper;
-import ru.netology.dailyTrip.helpers.DbHelper;
 
 import java.util.List;
 

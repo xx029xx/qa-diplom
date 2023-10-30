@@ -1,13 +1,13 @@
 package ru.netology.dailyTrip.tests.frontend;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.*;
-import io.qameta.allure.selenide.AllureSelenide;
-import org.testng.annotations.*;
 import ru.netology.dailyTrip.helpers.DataHelper;
 import ru.netology.dailyTrip.helpers.DbHelper;
 import ru.netology.dailyTrip.pages.TripCardPage;
 import ru.netology.dailyTrip.pages.TripFormPage;
+import io.qameta.allure.*;
+import io.qameta.allure.selenide.AllureSelenide;
+import org.testng.annotations.*;
 
 import java.util.List;
 

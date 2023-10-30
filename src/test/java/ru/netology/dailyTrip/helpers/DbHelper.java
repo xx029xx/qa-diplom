@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.SneakyThrows;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.ResultSetHandler;
+import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 import java.sql.Connection;
@@ -20,7 +21,7 @@ public class DbHelper {
     @SneakyThrows
     public static void setup() {
         runner = new QueryRunner();
-        conn = DriverManager.getConnection(System.getProperty("dbUrl"), "app", "pass");
+        conn = DriverManager.getConnection(System.getProperty("dbUrl"), "base_mysql", "pass");
     }
 
     @SneakyThrows
@@ -49,7 +50,7 @@ public class DbHelper {
     public static List<PaymentEntity> getPayments() {
         setup();
         var sqlQuery = "SELECT * FROM payment_entity ORDER BY created DESC;";
-        ResultSetHandler<List<PaymentEntity>> resultHandler = new BeanListHandler<>(PaymentEntity.class);
+        ResultSetHandler<PaymentEntity> resultHandler = new BeanHandler<>(PaymentEntity.class);
         return runner.query(conn, sqlQuery, resultHandler);
     }
 
